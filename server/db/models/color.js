@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
             throw new Error('name must be between 2 and 20 characters');
           }
         },
+        // len: [2, 20], // built-in validator, same as lengthRest
         endsWith(value) {
           if (value[value.length - 1] === 'y') {
             throw new Error("name must not end in 'y'");
